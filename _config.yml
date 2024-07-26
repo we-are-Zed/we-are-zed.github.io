@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Zed's blog
+subtitle: 'Zhuozhuoの錬金小屋'
+description: 'anya世界一かわいい、デザイナーはいつZedを強化するのか'
 keywords:
-author: John Doe
+author: Cs-Zed99
 language: en
-timezone: ''
+timezone: 'GMT+8'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
