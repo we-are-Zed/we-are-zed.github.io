@@ -6,7 +6,7 @@ avatar: /images/qinyin.png
 
 # Home page background image
 background:
-    - /images/anya.png
+    - /images/anya1.png
 
 # Loading image
 loading: /images/loading.gif
@@ -53,6 +53,10 @@ card:
         ...
     iconLinks:
     friendLinks:
+        Zed: https://github.com/we-are-Zed
+        Ben: https://github.com/chanbengz
+        Ice: https://github.com/IceLocke
+        NaiLong: https://github.com/RoderickQiu
         Argvchs: https://argvchs.github.io
 
 # Footer info
