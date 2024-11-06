@@ -81,7 +81,7 @@
 #home-card {
     width: 300px;
 }
-#home-card #card-style {
+# #card-style {
     background: #fff;
     border: none;
     border-radius: 10px;
@@ -134,8 +134,8 @@
 }
 #home-card #card-div .icon-links a {
     border-radius: 5px;
-    color: #5c6b72;
-    font-size: 18px;
+    color: hsl(199, 11%, 40%);
+    font-size: 22px;
     padding: 5px;
 }
 #home-card #card-div .icon-links a:hover,

@@ -71,11 +71,14 @@
         <div id="giscus-container" class="giscus"></div>
     </div>
     <% } %>
-    <% if (theme.waline.enable) { %>
-    <div id="comment">
-        <div id="waline-container"></div>
-    </div>
-    <% } %>
+        <% if (theme.waline.enable) { %>
+        <!-- 样式文件 -->
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+        <div id="comment">
+            <div id="waline-container">
+            </div>
+        </div>
+        <% } %>
     <% if (theme.twikoo.enable) { %>
     <div id="comment">
         <div id="twikoo-container"></div>

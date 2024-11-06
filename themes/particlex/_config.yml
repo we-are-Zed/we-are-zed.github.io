@@ -2,11 +2,11 @@
 # https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
-avatar: /images/qinyin.png
+avatar: /images/avatar.jpg
 
 # Home page background image
 background:
-    - /images/anya1.png
+    - /images/zed1-2.gif
 
 # Loading image
 loading: /images/loading.gif
@@ -27,7 +27,7 @@ menu:
     Home:
         name: house
         theme: solid
-        link: /
+        link: https://github.com/we-are-Zed?tab=repositories
     About:
         name: id-card
         theme: solid
@@ -49,15 +49,36 @@ menu:
 card:
     enable: true
     description: |
-        Description
+        Zed King!
+        A CSer who doesn't study very hard
         ...
     iconLinks:
+        Github:
+            theme: brands
+            name: square-github
+            link: https://github.com/we-are-Zed
+        Twitter:
+            theme: brands
+            name: square-twitter
+            link: https://twitter.com/王卓
+        Email:
+            theme: solid
+            name: envelope
+            link: mailto:12210532@mail.sustech.edu.cn
+        instagram:
+            theme: brands
+            name: square-instagram
+            link: https://www.instagram.com/aniyazed/
+        telegram:
+            theme: brands
+            name: telegram
+            link: https://t.me/anyazed99
+
     friendLinks:
-        Zed: https://github.com/we-are-Zed
-        Ben: https://github.com/chanbengz
-        Ice: https://github.com/IceLocke
-        NaiLong: https://github.com/RoderickQiu
         Argvchs: https://argvchs.github.io
+        chanbengz: https://blog.benx.dev
+        ice: https://blog.icel.site
+        Nailoong: https://r-q.name 
 
 # Footer info
 footer:
@@ -95,7 +116,7 @@ crypto:
 
 # Search
 search:
-    enable: false
+    enable: true
 
 # giscus
 # https://github.com/giscus/giscus
@@ -129,9 +150,9 @@ gitalk:
 # Waline
 # https://github.com/walinejs/waline
 waline:
-    enable: false
-    serverURL: # Waline server address url, you should set this to your own link
-    locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
+    enable: true
+    serverURL: https://vercel-demo-phi-orpin.vercel.app
+    #locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji
@@ -147,7 +168,7 @@ waline:
         - link
     requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
         - nick
-    lang: # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
