@@ -1,10 +1,12 @@
 ---
 title: About Me
-date: 2024-07-30 18:34:32
+date: 2024-11-05 18:34:32
 tags: 
     - Zed
     - Anya
     - Zhuo
+
+description: 比GitHub首页稍微正式一点的自我介绍
 ---
 
 [Home](https://we-are-zed.github.io) >> Zed's Blog
