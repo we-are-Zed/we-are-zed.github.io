@@ -100,11 +100,10 @@ JavaFX 是一个<a href="https://openjfx.io/" target="_blank">开源</a>的下�
 
 JavaFX应用程序按层次划分为三个主要组件，即Stage、Scene和节点。我们需要在每个JavaFX应用程序中导入**javafx.application.Application**类。它为JavaFX应用程序提供以下生命周期方法：
 
-```java
-public void init()
-public abstract void start(Stage primaryStage)
-public void stop()
-```
+
+> public void init()
+> public abstract void start(Stage primaryStage)
+> public void stop()
 
 为了创建一个基本的JavaFX应用程序，我们需要：
 
@@ -163,26 +162,24 @@ FXML文件通常用于定义界面的布局和元素（如按钮、文本框等�
 
 FXML文件可以通过`FXMLLoader`类加载，该类会根据FXML文件创建一个场景图（scene graph）的对象结构。
 
-以下是一个简单的FXML文件示例：
+<!-- 以下是一个简单的FXML文件示例：
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+``` html
+ <?xml version="1.0" encoding="UTF-8"?>
+ <?import javafx.geometry.Insets?>
+ <?import javafx.scene.control.Label?>
+ <?import javafx.scene.layout.VBox?>
+ <?import javafx.scene.control.Button?>
+ <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.tutorialdemo.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+   </padding>
+   <Label fx:id="welcomeText"/>
+   <Button text="Hello!" onAction="#onHelloButtonClick"/>
+ </VBox>
+``` -->
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
-```
 
 ### Controller简介
 
@@ -194,22 +191,19 @@ Controller类中的方法和字段需要使用`@FXML`注解，以便FXML加载�
 
 以下是一个简单的Controller类示例：
 
-```java
-package org.example.tutorialdemo;
+> package org.example.tutorialdemo;
+> import javafx.fxml.FXML;
+> import javafx.scene.control.Label;
+> public class HelloController {
+>    @FXML
+>    private Label welcomeText;
+>    @FXML
+>    protected void onHelloButtonClick() {
+>        welcomeText.setText("Welcome to JavaFX Application!");
+>    }
+>}
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
-public class HelloController {
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-}
-```
 
 在这个示例中，`onHelloButtonClick`方法将在`Button`被点击时被调用，它将改变`welcomeText`的文本。
 
@@ -285,15 +279,14 @@ JavaFX有多种类型的事件，每种事件都对应用户或程序的特定�
 ![](./images/Introduction_Project_JavaFx/scene_builder_12.png)
 
 2. 在控制类中写上对应的控制方法。
-```java
-@FXML
-void LoginBtnReleased() {
 
-}
-```
+> @FXML
+> void LoginBtnReleased() {
+>
+> }
 
 3. 写一个简单的登录验证。
-```java
+
 @FXML
 void LoginBtnReleased() {
     String username = Input_username.getText();
@@ -315,7 +308,6 @@ void LoginBtnReleased() {
     }
 }
 
-```
 
 4. 效果如下。
 ![](./images/Introduction_Project_JavaFx/scene_builder_13.gif)
@@ -327,25 +319,25 @@ void LoginBtnReleased() {
 
 为了在FXML文件中引用控制类，你需要在FXML文件的顶部通过`fx:controller`属性指定控制类的完整路径，例如：
 
-```xml
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.MyController">
-    <!-- UI elements here -->
-</AnchorPane>
-```
+
+> <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.> MyController">
+>     <!-- UI elements here -->
+> </AnchorPane>
+
 
 在这个例子中，`MyController`是控制类的名称，而`com.example`是包名。
 
 ### 如何切换场景Scene？
 下面是一个监听事件，当按钮按下时跳转到`OtherPage.fxml`对应的界面。
-```
+
 //文件路径如下
 src
 └───resources
     └───foo
         └───bar
             └───OtherPage.fxml
-```
-```java
+
+
 @FXML
 void btnClick() throws IOException {
     Stage primaryStage = (Stage) welcomeText.getScene().getWindow();// 此处的welcomeText 为当前场景中任意一个控件实例
@@ -357,7 +349,6 @@ void btnClick() throws IOException {
     Scene scene = new Scene(root);
     primaryStage.setScene(scene);
 }
-```
 
 ## 资源
 <a href="https://ant.design/docs/spec/introduce-cn" target="_blank">Ant Design 设计规范</a>

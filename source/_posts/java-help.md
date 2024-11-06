@@ -9,7 +9,9 @@ description: 与邱邱人合作写于2024Fall的java_project指南
 ---
 # JavaA_project经验指南
 
-# ![JAVA](https://img.shields.io/badge/JAVA-Suki-red)![swing](https://img.shields.io/badge/swing-Obsolete-blue)![javaFx](https://img.shields.io/badge/JAVAFX-Advanced-yellow)
+# ![JAVA](https://img.shields.io/badge/JAVA-Suki-red)
+# ![swing](https://img.shields.io/badge/swing-Obsolete-blue)
+# ![javaFx](https://img.shields.io/badge/JAVAFX-Advanced-yellow)
 
 （关于英文文档我自己都看不太明白，而且英语水平完全依赖于喂给GPT的中文水平，就不给大家写英文了）
 
