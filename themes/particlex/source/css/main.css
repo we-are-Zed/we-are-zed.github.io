@@ -172,6 +172,15 @@
     width: 100vw;
     z-index: -1;
 }
+#home-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 #home-head #home-info .info {
     align-items: center;
     border-radius: 50%;
