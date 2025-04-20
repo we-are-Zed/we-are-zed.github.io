@@ -162,24 +162,23 @@ FXML文件通常用于定义界面的布局和元素（如按钮、文本框等�
 
 FXML文件可以通过`FXMLLoader`类加载，该类会根据FXML文件创建一个场景图（scene graph）的对象结构。
 
-<!-- 以下是一个简单的FXML文件示例：
+以下是一个简单的FXML文件示例：
 
-``` html
- <?xml version="1.0" encoding="UTF-8"?>
- <?import javafx.geometry.Insets?>
- <?import javafx.scene.control.Label?>
- <?import javafx.scene.layout.VBox?>
- <?import javafx.scene.control.Button?>
- <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.tutorialdemo.HelloController">
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-   </padding>
-   <Label fx:id="welcomeText"/>
-   <Button text="Hello!" onAction="#onHelloButtonClick"/>
- </VBox>
-``` -->
-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+     fx:controller="org.example.tutorialdemo.HelloController">
+  <padding>
+     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+  </padding>
+  <Label fx:id="welcomeText"/>
+  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+</VBox>
+```
 
 ### Controller简介
 
@@ -280,13 +279,7 @@ JavaFX有多种类型的事件，每种事件都对应用户或程序的特定�
 
 2. 在控制类中写上对应的控制方法。
 
-> @FXML
-> void LoginBtnReleased() {
->
-> }
-
-3. 写一个简单的登录验证。
-
+```java
 @FXML
 void LoginBtnReleased() {
     String username = Input_username.getText();
@@ -307,7 +300,32 @@ void LoginBtnReleased() {
         alert.showAndWait();
     }
 }
+```
 
+3. 写一个简单的登录验证。
+
+```java
+@FXML
+void LoginBtnReleased() {
+    String username = Input_username.getText();
+    String passwd = Input_passwd.getText();
+    if (username.equals("admin") && passwd.equals("admin")) {//判断用户名密码是否为某个值
+        //弹出一个对话框
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("提示");
+        alert.setHeaderText("登录成功");
+        alert.setContentText("登录成功");
+        alert.showAndWait();
+    } else {
+        //弹出一个对话框
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("提示");
+        alert.setHeaderText("登录失败");
+        alert.setContentText("登录失败");
+        alert.showAndWait();
+    }
+}
+```
 
 4. 效果如下。
 ![](./images/Introduction_Project_JavaFx/scene_builder_13.gif)
@@ -319,11 +337,11 @@ void LoginBtnReleased() {
 
 为了在FXML文件中引用控制类，你需要在FXML文件的顶部通过`fx:controller`属性指定控制类的完整路径，例如：
 
-
-> <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.> MyController">
->     <!-- UI elements here -->
-> </AnchorPane>
-
+```xml
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.MyController">
+    <!-- UI elements here -->
+</AnchorPane>
+```
 
 在这个例子中，`MyController`是控制类的名称，而`com.example`是包名。
 
@@ -331,13 +349,15 @@ void LoginBtnReleased() {
 下面是一个监听事件，当按钮按下时跳转到`OtherPage.fxml`对应的界面。
 
 //文件路径如下
+```
 src
 └───resources
     └───foo
         └───bar
             └───OtherPage.fxml
+```
 
-
+```java
 @FXML
 void btnClick() throws IOException {
     Stage primaryStage = (Stage) welcomeText.getScene().getWindow();// 此处的welcomeText 为当前场景中任意一个控件实例
@@ -349,6 +369,7 @@ void btnClick() throws IOException {
     Scene scene = new Scene(root);
     primaryStage.setScene(scene);
 }
+```
 
 ## 资源
 <a href="https://ant.design/docs/spec/introduce-cn" target="_blank">Ant Design 设计规范</a>
