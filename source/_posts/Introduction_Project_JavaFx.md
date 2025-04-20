@@ -349,7 +349,7 @@ void LoginBtnReleased() {
 下面是一个监听事件，当按钮按下时跳转到`OtherPage.fxml`对应的界面。
 
 //文件路径如下
-```
+```text
 src
 └───resources
     └───foo
