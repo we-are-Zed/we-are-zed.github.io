@@ -77,7 +77,7 @@ archive_generator:
 
 ```yaml
 # Avatar image
-avatar: /images/avatar.jpg
+avatar: /images/琴音.png
 
 # Home page background image
 background:
