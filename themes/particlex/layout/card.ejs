@@ -7,6 +7,20 @@
         <div class="description">
             <%- markdown(theme.card.description) %>
         </div>
+        <% if (theme.waline.enable && theme.waline.siteVisitor !== false) { %>
+        <div class="site-visitor">
+            <span class="icon">
+                <i class="fa-solid fa-users fa-fw"></i>
+            </span>
+            <span>访客：</span>
+            <span
+                id="site-visitor-count"
+                class="site-visitor-count waline-pageview-count"
+                data-path="<%- theme.waline.siteVisitorPath || '/__site_visitors__' %>"
+                data-server-url="<%- theme.waline.serverURL %>"
+            >--</span>
+        </div>
+        <% } %>
         <% if (theme.card.iconLinks) { %>
         <div class="icon-links">
             <% Object.entries(theme.card.iconLinks).forEach(([key, value]) => { %>

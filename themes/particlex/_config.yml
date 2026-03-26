@@ -2,7 +2,7 @@
 # https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
-avatar: /images/anya2.png
+avatar: /images/avatar.jpg
 
 # Home page background image
 background:
@@ -172,6 +172,8 @@ waline:
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
+    siteVisitor: true # Show site visitor counter on home card
+    siteVisitorPath: /__site_visitors__ # Waline counter path used by site visitor feature
 
 # Twikoo
 # https://github.com/imaegoo/twikoo

@@ -120,6 +120,21 @@
     margin: 20px auto;
     width: 85%;
 }
+#home-card #card-div .site-visitor {
+    align-items: center;
+    border-top: #cdcdcd solid 1px;
+    color: #5c6b72;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding-top: 12px;
+    width: 85%;
+}
+#home-card #card-div .site-visitor .site-visitor-count {
+    color: #66afef;
+    font-weight: bold;
+    min-width: 2ch;
+}
 #home-card #card-div .friend-links .friend-link {
     margin-bottom: 5px;
 }

@@ -50,6 +50,9 @@
 <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 <% } %>
 <% } %>
+<% if (type === "index" && theme.waline.enable) { %>
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<% } %>
 <% if (type === "index") { %>
 <script src="<%- url_for("/js/lib/home.js") %>"></script>
 <% } %>
